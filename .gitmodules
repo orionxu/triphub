@@ -2,3 +2,9 @@
 	path = p1
 	url = https://github.com/zyalm/CS537/p1
 	branch = master
+[submodule "CS537"]
+	path = CS537
+	url = https://github.com/zyalm/CS537.git
+[submodule "p3"]
+	path = p3
+	url = https://github.com/zyalm/p3.git
