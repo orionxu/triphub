@@ -1,3 +1,0 @@
-name cslogin netid
-Ying Zhang yingzhang yzhang865
-Kenny Jin kjin jjin59
