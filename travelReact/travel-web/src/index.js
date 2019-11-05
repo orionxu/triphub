@@ -4,6 +4,7 @@ import './index.css';
 import App from './Component/App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'semantic-ui-less/semantic.less'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
