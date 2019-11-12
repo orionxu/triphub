@@ -1,12 +1,23 @@
 import React from 'react';
 import '../App.css';
-import HomePage from "./Homepage"
+import HomePage from "./Homepage";
+import LoginForm from "./Login";
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import NaviBar from "./NaviBar"
+import RegisterForm from "./Register";
+import Maps from "./Maps";
 
 function App() {
   return (
-    <div className="App">
-      <HomePage/>
-    </div>
+      <Router>
+        <div className="App">
+            <NaviBar/>
+            <Route path="/homepage" component={HomePage} />
+            <Route path="/loginform" component={LoginForm} />
+            <Route path="/registerform" component={RegisterForm} />
+            <Route path="/maps" component={Maps} />
+        </div>
+      </Router>
   );
 }
 
