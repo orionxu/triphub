@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {Navbar, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap';
+import divWithClassName from "react-bootstrap/esm/utils/divWithClassName"
 
 class NaviBar extends Component {
     render() {
         return (
-            <nav>
+            <div>
                 <Navbar bg="dark" variant="dark">
                     <Navbar.Brand href="#home">TripHub</Navbar.Brand>
                     <Nav className="mr-auto">
@@ -18,8 +19,8 @@ class NaviBar extends Component {
                         <Button variant="outline-info">Search</Button>
                     </Form>
                 </Navbar>
-                <br />
-            </nav>
+
+            </div>
         )
     }
 }

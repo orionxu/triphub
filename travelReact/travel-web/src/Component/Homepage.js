@@ -15,6 +15,7 @@ import {
     Sidebar,
     Visibility,
 } from 'semantic-ui-react'
+import background from '../Assets/images/background.jpg';
 import { Redirect, Link } from 'react-router-dom';
 
 // Heads up!
@@ -30,6 +31,7 @@ const getWidth = () => {
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
  */
+
 const HomepageHeading = ({ mobile }) => (
     <Container text>
         <Header
@@ -43,6 +45,7 @@ const HomepageHeading = ({ mobile }) => (
                 marginTop: mobile ? '1.5em' : '3em',
             }}
         />
+
         <Header
             as='h2'
             content='Trip wherever you want when you want to.'
@@ -53,9 +56,11 @@ const HomepageHeading = ({ mobile }) => (
                 marginTop: mobile ? '0.5em' : '1.5em',
             }}
         />
+
         <a href="./maps" primary size='huge'>
-            Get Started
-            <Icon name='right arrow' />
+            <Button style={{color: '#20B2AA'}}> Get Started
+                <Icon name='right arrow' />
+            </Button>
         </a>
 
 
@@ -91,34 +96,10 @@ class DesktopContainer extends Component {
                     <Segment
                         inverted
                         textAlign='center'
-                        style={{ minHeight: 700, padding: '1em 0em' }}
+                        style={{ minHeight: 700, padding: '1em 0em', backgroundImage: `url(${background})`, backgroundSize: 'cover'}}
                         vertical
                     >
-                        <Menu
-                            fixed={fixed ? 'top' : null}
-                            inverted={!fixed}
-                            pointing={!fixed}
-                            secondary={!fixed}
-                            size='large'
-                        >
-                            {/*<Container>*/}
-                            {/*    <Menu.Item as='a' active>*/}
-                            {/*        Home*/}
-                            {/*    </Menu.Item>*/}
-                            {/*    <Menu.Item as='a'>Search</Menu.Item>*/}
-                            {/*    <Menu.Item as='a'>About Us</Menu.Item>*/}
-                            {/*    <Menu.Item as='a'>Favorite</Menu.Item>*/}
-                            {/*    <Menu.Item position='right'>*/}
-                            {/*        /!*<Button as='a' inverted={!fixed} >*!/*/}
-                            {/*            <Link to="/loginform">*/}
-                            {/*                Log in </Link>*/}
-                            {/*        /!*</Button>*!/*/}
-                            {/*        <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>*/}
-                            {/*            Sign Up*/}
-                            {/*        </Button>*/}
-                            {/*    </Menu.Item>*/}
-                            {/*</Container>*/}
-                        </Menu>
+
                         <HomepageHeading />
                     </Segment>
                 </Visibility>
