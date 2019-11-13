@@ -9,7 +9,7 @@ class NaviBar extends Component {
                 <Navbar bg="dark" variant="dark">
                     <Navbar.Brand href="#home">TripHub</Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="/homepage">Home</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="#">About US</Nav.Link>
                         <Nav.Link href="/loginform">Login</Nav.Link>
                         <Nav.Link href="/registerform">Register</Nav.Link>
