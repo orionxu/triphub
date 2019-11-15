@@ -1,2 +1,4 @@
-.idea/
+static/*
+.idea/*
+templates/frontend/*
 *.pyc
