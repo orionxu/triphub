@@ -1,4 +1,15 @@
-static/*
-.idea/*
-templates/frontend/*
+/static/*
+/.idea/*
+/templates/frontend/*
 *.pyc
+
+# testing
+/travel-web/coverage
+
+# production
+/travel-web/build
+
+# dependencies
+/travel-web/node_modules
+
+travel-web/.idea
