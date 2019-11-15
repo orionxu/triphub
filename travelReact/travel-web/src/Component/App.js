@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import NaviBar from "./NaviBar"
 import RegisterForm from "./Register";
 import Maps from "./Maps";
+import Profile from "./Profile";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/loginform" component={LoginForm} />
             <Route path="/registerform" component={RegisterForm} />
             <Route path="/maps" component={Maps} />
+            <Route path="/profile" component={Profile}/>
         </div>
       </Router>
   );

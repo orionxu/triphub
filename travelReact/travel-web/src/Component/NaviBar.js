@@ -13,6 +13,7 @@ class NaviBar extends Component {
                         <Nav.Link href="#">About US</Nav.Link>
                         <Nav.Link href="/loginform">Login</Nav.Link>
                         <Nav.Link href="/registerform">Register</Nav.Link>
+                        <Nav.Link href="/profile">Profile</Nav.Link>
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
