@@ -2,7 +2,9 @@
 ## About Project
 Trip planner is designed to make plan for travelers. Instead of just listing famous tourist attractions like many other travel websites, trip planner could design an optimized travel route with detailed time schedule. 
 
-## Run
+
+## Build and run on Linux/MacOS
 ```
-python manage.py runserver
+make build			# build the frond-end project
+make run			# run django server
 ```
