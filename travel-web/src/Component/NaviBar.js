@@ -1,26 +1,30 @@
 import React, {Component} from 'react';
-import {Navbar, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap';
-import divWithClassName from "react-bootstrap/esm/utils/divWithClassName"
+import {Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap';
+import { NavLink} from 'react-router-dom';
+import NavItem from "react-bootstrap/NavItem"
 
 class NaviBar extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <div>
                 <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">TripHub</Navbar.Brand>
+                    <Navbar.Brand href="/">TripHub</Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="#">About US</Nav.Link>
-                        <Nav.Link href="/loginform">Login</Nav.Link>
-                        <Nav.Link href="/registerform">Register</Nav.Link>
-                        <Nav.Link href="/profile">Profile</Nav.Link>
-                    </Nav>
-                    <Form inline>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-info">Search</Button>
-                    </Form>
-                </Navbar>
+                        <NavLink to="/"exact={true} style={{color: '#A9A9A9', textDecoration: 'none', marginRight: 10}} activeStyle={{color: 'yellow', textDecoration: 'none' , marginRight: 10}}>Home</NavLink>
+                        <NavLink to="/aboutus" style={{color: '#A9A9A9', textDecoration: 'none', marginRight: 10}} activeStyle={{color: 'yellow', textDecoration: 'none' , marginRight: 10}}>About Us</NavLink>
 
+                    </Nav>
+                    <Nav>
+                        <NavLink to="/profile" style={{color: '#A9A9A9', textDecoration: 'none', marginRight: 10}} activeStyle={{color: 'yellow', textDecoration: 'none' , marginRight: 10}}>Profile</NavLink>
+                        <NavLink to="/Favorites" style={{color: '#A9A9A9', textDecoration: 'none' , marginRight: 10}} activeStyle={{color: 'yellow', textDecoration: 'none' , marginRight: 10}}>Favorites</NavLink>
+                        <NavLink to="/loginform" style={{color: '#A9A9A9', textDecoration: 'none', marginRight: 10}} activeStyle={{color: 'yellow', textDecoration: 'none', marginRight: 10}}>Login</NavLink>
+                        <NavLink to="/registerform" style={{color: '#A9A9A9', textDecoration: 'none', marginRight: 10}} activeStyle={{color: 'yellow', textDecoration: 'none', marginRight: 10}}>Register</NavLink>
+                    </Nav>
+                </Navbar>
             </div>
         )
     }
