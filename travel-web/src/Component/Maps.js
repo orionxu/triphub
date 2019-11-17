@@ -29,10 +29,6 @@ class Maps extends Component {
 
     render() {
         return (
-            <Segment.Group horizontal>
-                <Segment>left</Segment>
-                <Segment>middle</Segment>
-                <Segment>
                     <CurrentLocation
                         centerAroundCurrentLocation
                         google={this.props.google}
@@ -51,8 +47,7 @@ class Maps extends Component {
                             </div>
                         </InfoWindow>
                     </CurrentLocation>
-                </Segment>
-            </Segment.Group>
+
         );
     }
 
