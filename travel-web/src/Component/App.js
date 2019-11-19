@@ -7,6 +7,8 @@ import NaviBar from "./NaviBar"
 import RegisterForm from "./Register";
 import Maps from "./Maps";
 import Profile from "./Profile";
+import TourList from "../Component/TourList/index";
+import FixedMenuLayout from "./About";
 
 function App() {
   return (
@@ -14,10 +16,12 @@ function App() {
         <div className="App">
             <NaviBar/>
             <Route exact path="/" component={HomePage} />
-            <Route path="/loginform" component={LoginForm} />
-            <Route path="/registerform" component={RegisterForm} />
+            <Route path="/LoginForm" component={LoginForm} />
+            <Route path="/RegisterForm" component={RegisterForm} />
             <Route path="/maps" component={Maps} />
             <Route path="/profile" component={Profile}/>
+            <Route path="/TourList" component={TourList}/>
+            <Route path="/FixedMenuLayout" component={FixedMenuLayout}/>
         </div>
       </Router>
   );

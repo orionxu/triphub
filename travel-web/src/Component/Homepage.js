@@ -7,12 +7,16 @@ import {
     Grid,
     Header,
     Icon,
+    Image,
     List,
+    Menu,
     Responsive,
     Segment,
+    Sidebar,
     Visibility,
 } from 'semantic-ui-react'
 import background from '../Assets/images/background.jpg';
+
 import { Redirect, Link } from 'react-router-dom';
 
 // Heads up!
@@ -54,7 +58,7 @@ const HomepageHeading = ({ mobile }) => (
             }}
         />
 
-        <a href="./maps" primary="true" size='huge'>
+        <a href="../tourlist" primary size='huge'>
             <Button style={{color: '#20B2AA'}}> Get Started
                 <Icon name='right arrow' />
             </Button>
@@ -124,7 +128,6 @@ ResponsiveContainer.propTypes = {
 
 const HomepageLayout = () => (
     <ResponsiveContainer>
-
         <Segment style={{ padding: '8em 0em' }} vertical>
             <Container text>
                 <Header as='h3' style={{ fontSize: '2em' }}>
@@ -137,25 +140,6 @@ const HomepageLayout = () => (
                 </p>
                 <Button as='a' size='large'>
                     Read More
-                </Button>
-                <Divider
-                    as='h4'
-                    className='header'
-                    horizontal
-                    style={{ margin: '3em 0em', textTransform: 'uppercase' }}
-                >
-                    <a href='#'>Case Studies</a>
-                </Divider>
-                <Header as='h3' style={{ fontSize: '2em' }}>
-                    Did We Tell You About Our Plan?
-                </Header>
-                <p style={{ fontSize: '1.33em' }}>
-                    Our trip planning project is focused on recommending detailed personalized trip plans
-                    to different users according to their specific interests. In other words, our website’s
-                    job is to help different users make choices when they hope to travel to somewhere.
-                </p>
-                <Button as='a' size='large'>
-                    I'm Quite Interested
                 </Button>
             </Container>
         </Segment>
