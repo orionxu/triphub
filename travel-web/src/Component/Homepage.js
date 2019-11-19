@@ -54,7 +54,7 @@ const HomepageHeading = ({ mobile }) => (
             }}
         />
 
-        <a href="./maps" primary size='huge'>
+        <a href="./maps" primary="true" size='huge'>
             <Button style={{color: '#20B2AA'}}> Get Started
                 <Icon name='right arrow' />
             </Button>
