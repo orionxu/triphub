@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'triphub.accounts',
     'triphub.frontend',
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
