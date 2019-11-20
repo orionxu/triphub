@@ -11,6 +11,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
+import {connect} from 'react-redux';
+import compose from 'recompose/compose';
 
 function Copyright() {
     return (
@@ -82,6 +84,8 @@ class Register extends Component {
             body: JSON.stringify({"username": this.state.email, "password": this.state.password})
         }).then((response) => {
             if (response.ok) {
+                localStorage.setItem('token', response.data.token);
+                this.props.setState(response.data.user);
                 let path = '/profile';
                 this.props.history.push(path)
             } else {
@@ -112,7 +116,7 @@ class Register extends Component {
     }
 
     render() {
-        const {classes} = this.props
+        const {classes} = this.props;
         return (
             <Grid container component="main" className={classes.root}>
                 <CssBaseline/>
@@ -224,6 +228,10 @@ class Register extends Component {
 
 Register.propTypes = {
     classes: PropTypes.object.isRequired,
-}
+};
 
-export default withStyles(styles, {withTheme: true})(Register);
+const mapDispatchToProps = dispatch =>({
+    loginState: userinfo => dispatch({type:'LOGIN_USER', payload: userinfo})
+});
+
+export default compose(withStyles(styles, {withTheme: true}), connect(null, mapDispatchToProps))(Register);

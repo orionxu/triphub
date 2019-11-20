@@ -3,8 +3,17 @@ import { Image, Icon, Label } from 'semantic-ui-react'
 import Typography from '@material-ui/core/Typography';
 import '../Style/Profile.css';
 import Card from "semantic-ui-react/dist/commonjs/views/Card"
+import store from "../index"
 
 class Profile extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            "username": store.getState().currentUser.username
+        };
+
+    }
+
     render() {
         return (
            <Card centered={true} fluid style={{width: 600}}>
@@ -20,7 +29,7 @@ class Profile extends Component {
                     <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' size='medium' circular centered={true}/>
                     <br/>
                    <Card.Content>
-                       <Card.Header>UserName is: </Card.Header>
+                       <Card.Header>UserName is: {this.state.username}</Card.Header>
                        <Card.Meta>
                            <span className='date'>Joined in Date</span>
                        </Card.Meta>

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
-
+from rest_framework.authtoken.models import Token
 
 class CreateUserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -23,6 +23,17 @@ class LoginUserSerializer(serializers.Serializer):
         if user and user.is_active:
             return user
         raise serializers.ValidationError("Unable to log in with provided credentials.")
+
+
+class JWTSerializer(serializers.Serializer):
+    token = serializers.CharField()
+
+    def validate(self, data):
+        token = Token.objects.get(key=data['token'])
+        if token:
+            user = User.objects.get(id=token.user_id)
+            return user
+        raise serializers.ValidationError("Unable to auth with provided credentials.")
 
 
 class UserSerializer(serializers.ModelSerializer):

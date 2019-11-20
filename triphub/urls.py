@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
-from triphub.accounts.api import UserRegistrationAPI, LoginAPI
+from triphub.accounts.api import UserRegistrationAPI, LoginAPI, JWTAPI
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('triphub.frontend.urls')),
     path('api/auth/register', UserRegistrationAPI.as_view()),
     path('api/auth/login', LoginAPI.as_view()),
+    path('api/auth/jwt', JWTAPI.as_view()),
 ]

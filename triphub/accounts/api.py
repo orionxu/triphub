@@ -1,7 +1,8 @@
 from rest_framework import generics
-from .serializers import CreateUserSerializer, UserSerializer, LoginUserSerializer
+from .serializers import CreateUserSerializer, UserSerializer, LoginUserSerializer, JWTSerializer
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
+from rest_framework import status
 
 
 class UserRegistrationAPI(generics.GenericAPIView):
@@ -26,3 +27,14 @@ class LoginAPI(generics.GenericAPIView):
         token = Token.objects.get(user=user)
         return Response({"user": UserSerializer(user, context=self.get_serializer_context()).data,
                          "token": token.key})
+
+
+class JWTAPI(generics.GenericAPIView):
+    serializer_class = JWTSerializer
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data
+        return Response({"user": UserSerializer(user, context=self.get_serializer_context()).data})
+

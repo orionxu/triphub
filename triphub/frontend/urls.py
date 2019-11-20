@@ -3,7 +3,10 @@ from triphub.frontend import views
 
 urlpatterns = [
     path('', views.index),
-    path('loginform', views.index),
-    path('registerform', views.index),
-    path('profile', views.profile),
+    path('login', views.index),
+    path('register', views.index),
+    path('profile', views.index),
+    path('maps', views.index),
+    path('TourList', views.index),
+    path('FixedMenuLayout', views.index),
 ]
