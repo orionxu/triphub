@@ -1,10 +1,10 @@
 import React from 'react';
 import '../App.css';
 import HomePage from "./Homepage";
-import LoginForm from "./Login";
+import Login from "./Login";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import NaviBar from "./NaviBar"
-import RegisterForm from "./Register";
+import Register from "./Register";
 import Maps from "./Maps";
 import Profile from "./Profile";
 import TourList from "../Component/TourList/index";
@@ -16,8 +16,8 @@ function App() {
         <div className="App">
             <NaviBar/>
             <Route exact path="/" component={HomePage} />
-            <Route path="/LoginForm" component={LoginForm} />
-            <Route path="/RegisterForm" component={RegisterForm} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
             <Route path="/maps" component={Maps} />
             <Route path="/profile" component={Profile}/>
             <Route path="/TourList" component={TourList}/>
