@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
-import ButtonToolbar from "react-bootstrap/ButtonToolbar";
+import NaviBarUser from "./NaviBarUser";
 
 class NaviBar extends Component {
     constructor(props) {
@@ -21,29 +21,12 @@ class NaviBar extends Component {
                             US</NavLink>
 
                     </Nav>
-                    <Nav>
-                        <NavLink to="/profile" style={{color: '#A9A9A9', textDecoration: 'none', marginRight: 10}}
-                                 activeStyle={{
-                                     color: 'yellow',
-                                     textDecoration: 'none',
-                                     marginRight: 10
-                                 }}>Profile</NavLink>
-                        <NavLink to="/favorites" style={{color: '#A9A9A9', textDecoration: 'none', marginRight: 10}}
-                                 activeStyle={{
-                                     color: 'yellow',
-                                     textDecoration: 'none',
-                                     marginRight: 10
-                                 }}>Favorites</NavLink>
-
-                    </Nav>
-                    <ButtonToolbar>
-                        <Button variant="outline-info" href="/login">Login </Button>
-                        <Button variant="outline-info" href="/register">Register </Button>
-                    </ButtonToolbar>
+                    <NaviBarUser/>
                 </Navbar>
             </div>
         )
     }
 }
+
 
 export default NaviBar;

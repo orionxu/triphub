@@ -24,7 +24,7 @@ class App extends Component {
                         <Route path="/login" component={Login}/>
                         <Route path="/register" component={Register}/>
                         <Route path="/maps" component={Maps}/>
-                        <Route path="/profile" component={Auth(Profile)}/>
+                        <Route path="/profile" component={Profile}/>
                         <Route path="/TourList" component={TourList}/>
                         <Route path="/FixedMenuLayout" component={FixedMenuLayout}/>
                     </div>
