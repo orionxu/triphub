@@ -1,4 +1,193 @@
 [
+        {
+        "Attraction name": "Tower of London-London England",
+        "Time range": "10:00 AM - 4:00 PM",
+        "Description": "One of London's most famous landmarks, the historic Tower houses the Crown Jewels, the prison cell of Sir Walter Raleigh, known as the Bloody Tower, and the Chapel of St. John and the Royal Armories.",
+        "Locality": "London EC3N 4AB, England",
+        "Price": "$32.46"
+    },
+    {
+        "Attraction name": "Churchill War Rooms-London England",
+        "Time range": "9:30 AM - 6:00 PM",
+        "Description": "Discover the secrets of the Second World War in the underground nerve centre where Churchill and his war cabinet lived and worked.",
+        "Locality": "London SW1A 2AQ, England",
+        "Price": "$63.07"
+    },
+    {
+        "Attraction name": "Tower Bridge-London England",
+        "Time range": "9:30 AM - 5:00 PM",
+        "Description": "An iconic London landmark and one of Britain's best loved historic sites, Tower Bridge is open to the public 363 days a year. Within the Bridge's iconic structure and magnificent Victorian Engine rooms, the Tower Bridge Exhibition is the best way of exploring the most famous bridge in the world! Come learn about this incredible feat of Victorian engineering, discover how the Bridge is raised and enjoy stunning panoramic views across London from our high-level walkways, 42 metres above the River Thames. Opening Times: 09:30 - 17:00 (last admission )",
+        "Locality": "London SE1 2UP, England",
+        "Price": "$39.42"
+    },
+    {
+        "Attraction name": "National Gallery-London England",
+        "Time range": "10:00 AM - 9:00 PM",
+        "Description": "The National Gallery houses the national collection of paintings in the Western European tradition from the 13th to the 19th centuries. It is on show 361 days a year, free of charge.",
+        "Locality": "London WC2N 5DN, England",
+        "Price": "$84.48"
+    },
+    {
+        "Attraction name": "The British Museum-London England",
+        "Time range": "10:00 AM - 8:30 PM",
+        "Description": "A museum of the world, for the world. Discover over two million years of human history and culture. Some of the world-famous objects include the Rosetta Stone, the Parthenon sculptures and Egyptian mummies.",
+        "Locality": "London WC1B 3DG, England",
+        "Price": "$26.28"
+    },
+    {
+        "Attraction name": "Westminster Abbey-London England",
+        "Time range": "9:30 AM - 3:30 PM",
+        "Description": "Westminster Abbey was initially built by Henry III in 1245 and it is one of the most important Gothic buildings of England. At first home of Benedictine monks, the coronation church since 1066 and the final resting place of 17 monarchs. It contains a treasury full of paintings, stained glass, pavements, textiles, books and various other artefacts plus the most significant collection of monumental sculptures of the UK. The Queen's Diamond Jubilee Galleries in the Abbey's Triforium opened in June 2018. Explore over 1,000 years of history in this truly unique space, high above the Abbey floor.",
+        "Locality": "London SW1P 3PA, England",
+        "Price": "$74.90"
+    },
+    {
+        "Attraction name": "Borough Market-London England",
+        "Time range": "10:00 AM - 5:00 PM",
+        "Description": "An amazing food market dating back to the 13th century.",
+        "Locality": "London SE1 1TL, England",
+        "Price": "$229.95"
+    },
+    {
+        "Attraction name": "St Paul s Cathedral-London England",
+        "Time range": "8:30 AM - 4:30 PM",
+        "Description": "Rebuilt by Christopher Wren after the great Fire of 1666, St. Paul's has been the site of many historic state occasions; including Sir Winston Churchill's state funeral and the Royal Wedding of Prince Charles and Lady Diana Spencer. A busy working Christian community with several daily services at which all are welcome. St Paul\\u2019s also welcomes visitors with access to five levels of the Cathedral including the Whispering Gallery with its unique acoustics and the Stone and Golden Galleries atop the Dome offering breathtaking panoramic views over London. Multimedia guides in eight languages for adults and children are included with sightseeing admission as well as free guided tours to join upon arrival.",
+        "Locality": "London EC4M 8AD, England",
+        "Price": "$22.34"
+    },
+    {
+        "Attraction name": "Natural History Museum-London England",
+        "Time range": "10:00 AM - 5:50 PM",
+        "Description": "A center of scientific excellence in the discovery of taxonomy and biodiversity, this world-famous museum promotes the discovery and enjoyment of the natural world through such exciting exhibits as the Life and Earth Galleries, wildlife garden and geological collections.",
+        "Locality": "London SW7 5BD, England",
+        "Price": "$84.48"
+    },
+    {
+        "Attraction name": "Hyde Park-London England",
+        "Time range": "5:00 AM - 12:00 AM",
+        "Description": "Once the hunting ground for Henry VIII, this large royal park is best known for its famous Speakers' Corner, where people speak their minds, Rotton Row, a famous horse-riding area and Serpentine Lake, home to waterfowl and oarsmen.",
+        "Locality": "London W2 2UH, England",
+        "Price": "$34.16"
+    },
+    {
+        "Attraction name": "Chelsea FC Stadium Tour Museum-London England",
+        "Time range": "9:30 AM - 5:00 PM",
+        "Description": "Chelsea Football Club also offers an established and acclaimed Stadium Tour and Museum attraction, offering an information and exciting insight into Chelsea and Stamford Bridge, alongside an interactive and immersive museum experience.",
+        "Locality": "London SW6 1HS, England",
+        "Price": "$31.54"
+    },
+    {
+        "Attraction name": "Covent Garden-London England",
+        "Time range": "12:00 PM - 6:00 PM",
+        "Description": "Filled with restaurants, bars, markets and boutiques, London's premier tourist center offers fabulous shopping by day, and the destination of theatergoers and patrons of the Royal Opera House by night.",
+        "Locality": "London WC2E 9DD, England",
+        "Price": "$229.95"
+    },
+    {
+        "Attraction name": "St James s Park-London England",
+        "Time range": "5:00 AM - 12:00 AM",
+        "Description": "This 90-acre park, the oldest Royal Park in London, features a large lake that is a wildlife sanctuary for ducks, geese, swans and even pelicans.",
+        "Locality": "London SW1A 2BJ, England",
+        "Price": "$74.90"
+    },
+    {
+        "Attraction name": "Up at The O2-London England",
+        "Time range": "10:00 AM - 8:30 PM",
+        "Description": "Get ready for a breathtaking new attraction, combining an exhilarating active outdoor challenge with a completely unique perspective on the Capital.Prepare yourself for an unforgettable 90 minute experience which will take you on an uplifting expedition across the roof of the world's most popular entertainment venue. Enjoy spectacular 360 degree views of London from our viewing platform in the centre of the roof, before finishing with a thrilling descent back to base to complete your adventure.",
+        "Locality": "London SE10 0DX, England",
+        "Price": "$39.42"
+    },
+    {
+        "Attraction name": "Sky Garden-London England",
+        "Time range": "10:00 AM - 6:00 PM",
+        "Description": "The famous enlarged glass dome of 20 Fenchurch Street is dedicated to three storeys of exquisitely landscaped public gardens and London's most exclusive social spaces, including observation decks and an open air terrace. Sky Garden also houses restaurants Darwin Brasserie, Fenchurch Seafood Bar & Grill and Sky Pod Bar.",
+        "Locality": "London EC3M 8AF, England",
+        "Price": "No price information"
+    },
+    {
+        "Attraction name": "Camden Market-London England",
+        "Time range": "10:00 AM - 6:00 PM",
+        "Description": "We're driven by the belief that you can only keep discovering if you keep looking ... so we're always adding interesting stores and traders. No two days are ever the same at Camden Market. Keep checking back to see what's new and what's next.",
+        "Locality": "London NW1 8AF, England",
+        "Price": "$229.95"
+    },
+    {
+        "Attraction name": "Regent s Park-London England",
+        "Time range": "5:00 AM - 9:00 PM",
+        "Description": "Originally a royal hunting ground, this scenic park is a popular recreation area offering an artificial lake, tennis courts, cricket ground, children's playgrounds and the London Zoo, which lies on the north side of the park.",
+        "Locality": "London NW1 4NR, England",
+        "Price": "$210.24"
+    },
+    {
+        "Attraction name": "Emirates Stadium Tour and Museum-London England",
+        "Time range": "10:00 AM - 3:00 PM",
+        "Description": "Journey into Emirates Stadium and go on an all access behind-the-scenes tour. You\\u2019ll have the opportunity to walk in the footsteps of your heroes, listen to their matchday experiences and explore never before seen footage. Tours available in 10 languages.",
+        "Locality": "London N5 1BU, England",
+        "Price": "$84.10"
+    },
+    {
+        "Attraction name": "The View from The Shard-London England",
+        "Time range": "10:00 AM - 10:00 PM",
+        "Description": "Located 800ft above the ground, The View from The Shard is the highest viewing platform in London and is the only place to see the entire city all at once. The viewing galleries on Level 69 and the open-air Skydeck on Level 72 provide spectacular 360\\u00B0 views of London and beyond. In fact, on a clear day, visitors can see for 40 miles. Friendly and knowledgeable guest ambassadors are on hand to answer questions about this iconic building and the breath-taking views. Fall in love with the iconic skyline and spot famous sites including The Houses of Parliament, The Tower of London, Buckingham Palace, the Olympic Park and Wembley Stadium. Ideal for London\\u2019s culture seekers as well as those on their first trip to the capital.",
+        "Locality": "London SE1, England",
+        "Price": "$67.34"
+    },
+    {
+        "Attraction name": "Imperial War Museums-London England",
+        "Time range": "10:00 AM - 6:00 PM",
+        "Description": "Founded during the First World War, IWM London gives voice to the extraordinary experiences of ordinary people forced to live in a world torn apart by conflict. From the wonder of its world-famous atrium to the countless discoveries on each of its six floors, it is a place filled with the power to move, surprise and inspire.",
+        "Locality": "London SE1 6HZ, England",
+        "Price": "$11.81"
+    },
+    {
+        "Attraction name": "Shakespeare s Globe Theatre-London England",
+        "Time range": "10:00 AM - 5:30 PM",
+        "Description": "Founded by the pioneering American actor and director Sam Wanamaker, Shakespeare's Globe is a unique international resource dedicated to the exploration of Shakespeare's work and the playhouse for which he wrote, through the connected means of performance and education.Together, the Globe Theatre Company, Shakespeare's Globe Exhibition and Globe Education seek to further the experience and international understanding of Shakespeare in performance.",
+        "Locality": "London SE1 9DT, England",
+        "Price": "$22.34"
+    },
+    {
+        "Attraction name": "HMS Belfast-London England",
+        "Time range": "10:00 AM - 6:00 PM",
+        "Description": "London\\u2019s warship experience. Climb on board and explore all 9 decks. Permanently moored on the Thames.",
+        "Locality": "London SE1 2JH, England",
+        "Price": "$21.48"
+    },
+    {
+        "Attraction name": "Kensington Gardens-London England",
+        "Time range": "6:00 AM - 8:00 PM",
+        "Description": "Separated from Hyde Park by the Serpentine, a lake used by boaters and swimmers, this park is calmer and more peaceful than its neighbor, and features many attractions including a statue of Peter Pan, Albert Memorial and the Serpentine Art Gallery.",
+        "Locality": "London W2 UH, England",
+        "Price": "$46.12"
+    },
+    {
+        "Attraction name": "Wallace Collection-London England",
+        "Time range": "10:00 AM - 5:00 PM",
+        "Description": "A free to visit, national museum in the heart of central London. Originally a private collection, the artwork was bequeathed to the nation by Lady Wallace in 1897. This attraction features one of the world's best collections of French 18th-century pictures, porcelain and furniture, plus a fantastic array of 17th-century paintings.",
+        "Locality": "London W1U 3BN, England",
+        "Price": "$154.10"
+    },
+    {
+        "Attraction name": "London Designer Outlet-Wembley Greater London England",
+        "Time range": "10:00 AM - 7:00 PM",
+        "Description": "LDO is London's leading fashion and lifestyle outlet centre. Its 50 stores offer year-round discounts of 30-70% off RRP and it also has 20 restaurants, bars and coffee shops, a 9-screen Cineworld and free children's covered play park. Brands include Nike, GAP, Superdry, Guess, Kurt Geiger, Converse, Ernest Jones, Lindt, Clarks, M&S, Body Shop, The North Face, adidas. LDO is right next to world-famous Wembley Stadium and The SSE Arena and easily reached by train, Tube, bus and car. The nearest stations are Wembley Park and Wembley Stadium. There's ample car parking, which costs \\u00A31 per hour (first 6 hours, excludes event days). On Stadium and Arena event days LDO guests spending \\u00A340+ at LDO can park for just \\u00A31 per hour, too. See website for details.",
+        "Locality": "Wembley HA9 0RX, England",
+        "Price": "No price information"
+    },
+    {
+        "Attraction name": "Paul Smith No 9 Albemarle Street-London England",
+        "Time range": "12:00 AM - 6:00 PM",
+        "Description": "From it's beautiful custom cast iron facade to the eclectic range of clothes, furniture and curiosities inside No. 9 Albemarle Street is the jewel in the crown of the Mayfair shopping experience. The London flagship store of Paul Smith, Britain's foremost luxury designer this shop embodies the eccentric style and personality of it's owner. With rotating art exhibitions and window installations this shop is luxury with a difference.",
+        "Locality": "London W1S 4BL, England",
+        "Price": "No price information"
+    },
+    {
+        "Attraction name": "Fortnum Mason-London England",
+        "Time range": "12:00 PM - 6:00 PM",
+        "Description": "From a small grocery store in Piccadilly in 1707, has grown a celebrated store with an international reputation for the exclusivity and quality of the products it sells. Fortnum's Food Hall is an irresistible display of gourmet pleasures, from chocolates and biscuits to smoked salmon and Stilton, vintage marmalade and seasonal produce. Passionate about provenance, we are proud to recommend every jar, spoonful and slice for our hungry customers.",
+        "Locality": "London W1A 1ER, England",
+        "Price": "$27.59"
+    },
     {
         "Attraction name": "St Mary le Strand-London England",
         "Time range": "10:00 AM - 1:00 PM",
