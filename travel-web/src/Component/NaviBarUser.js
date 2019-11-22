@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import store from "./store";
-import {Button} from "react-bootstrap";
-import ButtonToolbar from "react-bootstrap/ButtonToolbar";
+import {Button, Nav} from "react-bootstrap";
 import {Dropdown, Icon} from 'semantic-ui-react'
 import connect from "react-redux/es/connect/connect";
+import {NavLink} from "react-router-dom"
 
 class NaviBarUser extends Component {
     constructor(props) {
@@ -58,10 +58,10 @@ class NaviBarUser extends Component {
             )
         } else {
             return (
-                <ButtonToolbar>
-                    <Button variant="outline-info" href="/login">Login </Button>
-                    <Button variant="outline-info" href="/register">Register </Button>
-                </ButtonToolbar>
+                <Nav>
+                    <Button variant="outline-primary" style={{marginRight: 10}}><NavLink to="/login" style={{color: '#A9A9A9', textDecoration: 'none'}} activeStyle={{color: 'yellow', textDecoration: 'none'}}>Login</NavLink></Button>
+                    <Button variant="outline-primary" style={{marginRight: 10}}><NavLink to="/register" style={{color: '#A9A9A9', textDecoration: 'none'}} activeStyle={{color: 'yellow', textDecoration: 'none'}}>Register</NavLink></Button>
+                </Nav>
             );
         }
     }

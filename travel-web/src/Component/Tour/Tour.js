@@ -22,7 +22,7 @@ export default class Tour extends Component {
           </span>
         </div>
         <div className="tour-info">
-          <a href="../maps" primary size='huge'>
+          <a href="/locations" primary size='huge'>
             <h3>{city}</h3>
           </a>
           <h4>{name}</h4>

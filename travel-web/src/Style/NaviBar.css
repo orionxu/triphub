@@ -1,3 +1,4 @@
-.Navbar {
-    height: 200px !important;
+buttons:focus
+{
+    color: yellow;
 }

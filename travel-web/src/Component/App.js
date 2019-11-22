@@ -12,6 +12,8 @@ import FixedMenuLayout from "./About";
 import Auth from "./require_auth";
 import {Component} from "react"
 import {Provider} from 'react-redux';
+import About from "./About";
+import Locations from "./Locations";
 
 class App extends Component {
     render() {
@@ -27,6 +29,8 @@ class App extends Component {
                         <Route path="/profile" component={Profile}/>
                         <Route path="/TourList" component={TourList}/>
                         <Route path="/FixedMenuLayout" component={FixedMenuLayout}/>
+                        <Route path="/aboutus" component={About}/>
+                        <Route path="/locations" component={Locations}/>
                     </div>
                 </Router>
             </Provider>

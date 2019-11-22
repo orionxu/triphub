@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Image, Icon, Label} from 'semantic-ui-react'
+import {Image, Label} from 'semantic-ui-react'
 import Typography from '@material-ui/core/Typography';
 import '../Style/Profile.css';
 import Card from "semantic-ui-react/dist/commonjs/views/Card"

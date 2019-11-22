@@ -155,7 +155,7 @@ class Register extends Component {
                         <form className={classes.form} noValidate>
                             <Grid container>
                                 <Grid item>
-                                    <Link href="/loginform" variant="body2">
+                                    <Link href="/login" variant="body2">
                                         {"Already have an account? Login"}
                                     </Link>
                                 </Grid>

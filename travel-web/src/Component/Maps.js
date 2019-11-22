@@ -1,7 +1,6 @@
-import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
+import {GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 import React, {Component} from 'react';
 import CurrentLocation from './Map';
-import { Segment } from 'semantic-ui-react'
 
 class Maps extends Component {
 
@@ -29,10 +28,6 @@ class Maps extends Component {
 
     render() {
         return (
-            <Segment.Group horizontal>
-                <Segment>left</Segment>
-                <Segment>middle</Segment>
-                <Segment>
                     <CurrentLocation
                         centerAroundCurrentLocation
                         google={this.props.google}
@@ -51,8 +46,6 @@ class Maps extends Component {
                             </div>
                         </InfoWindow>
                     </CurrentLocation>
-                </Segment>
-            </Segment.Group>
         );
     }
 

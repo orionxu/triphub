@@ -2,13 +2,9 @@ import React from 'react'
 import {
     Button,
     Container,
-    Divider,
-    Dropdown,
     Grid,
     Header, Icon,
-    Image,
     List,
-    Menu,
     Segment,
 } from 'semantic-ui-react'
 import background from '../Assets/images/11.jpeg';
