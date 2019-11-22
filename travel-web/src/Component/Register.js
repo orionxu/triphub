@@ -96,8 +96,14 @@ class Register extends Component {
             body: JSON.stringify({"username": this.state.email, "password": this.state.password})
         }).then((response) => {
             if (response.ok) {
-                localStorage.setItem('token', response.data.token);
-                this.props.setState(response.data.user);
+                return response.json();
+            } else {
+                return null;
+            }
+        }).then((response)=>{
+            if (response) {
+                localStorage.setItem('token', response.token);
+                this.props.loginState(response.user);
                 let path = '/profile';
                 this.props.history.push(path)
             } else {
@@ -152,7 +158,7 @@ class Register extends Component {
                         <Typography component="h1" variant="h5">
                             Sign Up
                         </Typography>
-                        <form className={classes.form} noValidate>
+                        <form className={classes.form} noValidate onSubmit={this.handleSubmit}>
                             <Grid container>
                                 <Grid item>
                                     <Link href="/login" variant="body2">
@@ -289,8 +295,7 @@ class Register extends Component {
                                     </FormGroup>
                                 </Grid>
                             </Grid>
-                            <Button onSubmit={this.handleSubmit}
-                                    type="submit"
+                            <Button type="submit"
                                     fullWidth
                                     variant="contained"
                                     color="primary"
