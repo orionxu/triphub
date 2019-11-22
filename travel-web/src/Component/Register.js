@@ -13,6 +13,9 @@ import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import {connect} from 'react-redux';
 import compose from 'recompose/compose';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import FormGroup from '@material-ui/core/FormGroup';
 
 function Copyright() {
     return (
@@ -62,14 +65,23 @@ class Register extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleEmailChange = this.handleEmailChange.bind(this);
         this.handlePWChange = this.handlePWChange.bind(this);
+        this.handlePW2Change = this.handlePW2Change.bind(this);
         this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
         this.handleLastNameChange = this.handleLastNameChange.bind(this);
+        this.handleChecked = this.handleChecked.bind(this);
         this.state = {
             error: null,
             firstname: "",
             lastname: "",
             email: "",
-            password: ""
+            password: "",
+            confirmPassword: "",
+            checkedMuseum: false,
+            checkedPark: false,
+            checkedShopping: false,
+            checkedLandmark: false,
+            checkedAmusement: false,
+            checkedNature: false
         };
     }
 
@@ -91,9 +103,10 @@ class Register extends Component {
             } else {
                 alert("Sign up failed");
                 this.setState({firstName: ''});
-                this.setState({lastName: ''})
+                this.setState({lastName: ''});
                 this.setState({email: ''});
-                this.setState({password: ''})
+                this.setState({password: ''});
+                this.setState({confirmPassword: ''});
             }
         });
     }
@@ -107,12 +120,22 @@ class Register extends Component {
         this.setState({password: event.target.value});
     }
 
+    handlePW2Change(event) {
+        this.setState({confirmPassword: event.target.value});
+    }
+
     handleFirstNameChange(event) {
         this.setState({firstName: event.target.value});
     }
 
     handleLastNameChange(event) {
         this.setState({lastName: event.target.value});
+    }
+
+    handleChecked(name) {
+        return (event) => {
+            this.setState({[name]: event.target.checked})
+        }
     }
 
     render() {
@@ -130,6 +153,13 @@ class Register extends Component {
                             Sign Up
                         </Typography>
                         <form className={classes.form} noValidate>
+                            <Grid container>
+                                <Grid item>
+                                    <Link href="/loginform" variant="body2">
+                                        {"Already have an account? Login"}
+                                    </Link>
+                                </Grid>
+                            </Grid>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} sm={6}>
                                     <TextField onChange={this.handleFirstNameChange}
@@ -185,7 +215,7 @@ class Register extends Component {
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <TextField onChange={this.handlePWChange}
+                                    <TextField onChange={this.handlePW2Change}
                                                variant="outlined"
                                                margin="normal"
                                                required
@@ -195,8 +225,68 @@ class Register extends Component {
                                                type="password"
                                                id="confirm_password"
                                                autoComplete="current-password"
-                                               value={this.state.password}
                                     />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <h4> Preference </h4>
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <FormGroup row>
+                                        <FormControlLabel
+                                            control={
+                                                <Checkbox checked={this.state.checkedMuseum}
+                                                          onChange={this.handleChecked('checkedMuseum')}
+                                                          value="checkedMuseum"/>
+                                            }
+                                            label="Museum"
+                                        />
+                                        <FormControlLabel
+                                            control={
+                                                <Checkbox checked={this.state.checkedPark}
+                                                          onChange={this.handleChecked('checkedPark')}
+                                                          value="checkedPark"/>
+                                            }
+                                            label="Park"
+                                        />
+                                        <FormControlLabel
+                                            control={
+                                                <Checkbox checked={this.state.checkedShopping}
+                                                          onChange={this.handleChecked('checkedShopping')}
+                                                          value="checkedShopping"/>
+                                            }
+                                            label="Shopping"
+                                        />
+                                    </FormGroup>
+
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <FormGroup row>
+                                        <FormControlLabel
+                                            control={
+                                                <Checkbox checked={this.state.checkedLandmark}
+                                                          onChange={this.handleChecked('checkedLandmark')}
+                                                          value="checkedLandmark"
+                                                />
+                                            }
+                                            label="Landmark"
+                                        />
+                                        <FormControlLabel
+                                            control={
+                                                <Checkbox checked={this.state.checkedAmusement}
+                                                          onChange={this.handleChecked('checkedAmusement')}
+                                                          value="checkedAmusement"/>
+                                            }
+                                            label="Amusement"
+                                        />
+                                        <FormControlLabel
+                                            control={
+                                                <Checkbox checked={this.state.checkedNature}
+                                                          onChange={this.handleChecked('checkedNature')}
+                                                          value="checkedNature"/>
+                                            }
+                                            label="Nature"
+                                        />
+                                    </FormGroup>
                                 </Grid>
                             </Grid>
                             <Button onSubmit={this.handleSubmit}
@@ -206,15 +296,8 @@ class Register extends Component {
                                     color="primary"
                                     className={classes.submit}
                             >
-                                Sign In
+                                Sign Up
                             </Button>
-                            <Grid container>
-                                <Grid item>
-                                    <Link href="/loginform" variant="body2">
-                                        {"Already have an account? Login"}
-                                    </Link>
-                                </Grid>
-                            </Grid>
                             <Box mt={5}>
                                 <Copyright/>
                             </Box>
@@ -230,8 +313,8 @@ Register.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-const mapDispatchToProps = dispatch =>({
-    loginState: userinfo => dispatch({type:'LOGIN_USER', payload: userinfo})
+const mapDispatchToProps = dispatch => ({
+    loginState: userinfo => dispatch({type: 'LOGIN_USER', payload: userinfo})
 });
 
 export default compose(withStyles(styles, {withTheme: true}), connect(null, mapDispatchToProps))(Register);
