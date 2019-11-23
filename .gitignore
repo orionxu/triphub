@@ -1,6 +1,4 @@
-/static/*
 /.idea/*
-/templates/frontend/index.html
 *.pyc
 
 # testing
