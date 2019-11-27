@@ -1,8 +1,18 @@
+import newyork from "../Assets/images/newyork.jpeg"
+import paris from "../Assets/images/paris.jpeg"
+import london from "../Assets/images/london.jpeg"
+import tokyo from "../Assets/images/tokyo.jpeg"
+import Beijing from "../Assets/images/Great.jpg"
+import Shanghai from "../Assets/images/Shang.jpeg"
+import HongKong from "../Assets/images/Hong.jpg"
+import Seoul from "../Assets/images/seoul.jpg"
+import Sydney from "../Assets/images/sydney.jpg"
+import Venice from "../Assets/images/Venice.jpg"
 export const tourData = [
   {
     id: 1,
     city: "new york",
-    img: "./img/newyork.jpeg",
+    img: newyork,
     name: "new york bridge tour",
     info:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
@@ -10,7 +20,7 @@ export const tourData = [
   {
     id: 2,
     city: "paris",
-    img: "./img/paris.jpeg",
+    img: paris,
     name: "paris lights tour",
     info:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
@@ -18,7 +28,7 @@ export const tourData = [
   {
     id: 3,
     city: "london",
-    img: "./img/london.jpeg",
+    img: london,
     name: "london royal palace tour",
     info:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
@@ -26,7 +36,7 @@ export const tourData = [
   {
     id: 4,
     city: "tokyo",
-    img: "./img/tokyo.jpeg",
+    img: tokyo,
     name: "tokyo sushi tour",
     info:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
@@ -34,7 +44,7 @@ export const tourData = [
   {
     id: 5,
     city: "Beijing",
-    img: "./img/Great.jpg",
+    img: Beijing,
     name: "Beijing Great Wall tour",
     info:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
@@ -42,7 +52,7 @@ export const tourData = [
   {
     id: 6,
     city: "Shanghai",
-    img: "./img/Shang.jpeg",
+    img: Shanghai,
     name: "Shanghai River tour",
     info:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
@@ -50,7 +60,7 @@ export const tourData = [
   {
     id: 7,
     city: "HongKong",
-    img: "./img/Hong.jpg",
+    img: HongKong,
     name: "HongKong city tour",
     info:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
@@ -58,7 +68,7 @@ export const tourData = [
   {
     id: 8,
     city: "Seoul",
-    img: "./img/seoul.jpg",
+    img: Seoul,
     name: "Seoul idol tour",
     info:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
@@ -66,7 +76,7 @@ export const tourData = [
   {
     id: 9,
     city: "Sydney",
-    img: "./img/sydney.jpg",
+    img: Sydney,
     name: "Sydney Opera tour",
     info:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
@@ -74,7 +84,7 @@ export const tourData = [
   {
     id: 10,
     city: "Venice",
-    img: "./img/Venice.jpg",
+    img: Venice,
     name: "Venice River tour",
     info:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"

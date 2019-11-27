@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate
 from rest_framework.authtoken.models import Token
 from taggit_serializer.serializers import (TagListSerializerField,
                                            TaggitSerializer)
+from django.shortcuts import get_object_or_404
 
 
 class NewTagListSerializerField(TagListSerializerField):
@@ -58,7 +59,7 @@ class JWTSerializer(serializers.Serializer):
     token = serializers.CharField()
 
     def validate(self, data):
-        token = Token.objects.get(key=data['token'])
+        token = get_object_or_404(Token, key=data['token'])
         if token:
             user = User.objects.get(id=token.user_id)
             return user

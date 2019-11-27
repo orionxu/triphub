@@ -21,6 +21,7 @@ if (token){
             if (response.ok) {
                 return response.json();
             } else {
+                localStorage.clear();
                 return null;
             }
         }).then((response) => {
