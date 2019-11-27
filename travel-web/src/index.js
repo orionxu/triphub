@@ -25,7 +25,7 @@ if (token){
             }
         }).then((response) => {
             if (response) {
-                store.dispatch({type: 'LOGIN_USER', payload: response.user});
+                store.dispatch({type: 'LOGIN_USER', payload: {user: response.user, tags: response.tags}});
             }
         });
 

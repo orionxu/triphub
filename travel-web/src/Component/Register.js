@@ -87,13 +87,21 @@ class Register extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
+        let tags_str = "";
+        tags_str += this.state.checkedMuseum? 'museum,':'';
+        tags_str += this.state.checkedPark? 'park,':'';
+        tags_str += this.state.checkedShopping? 'shopping,':'';
+        tags_str += this.state.checkedLandmark? 'landmark,':'';
+        tags_str += this.state.checkedAmusement? 'amusement,':'';
+        tags_str += this.state.checkedNature? 'nature,':'';
+        tags_str = tags_str.substr(0, tags_str.length-1);
         fetch('/api/auth/register', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({"username": this.state.email, "password": this.state.password})
+            body: JSON.stringify({"username": this.state.email, "password": this.state.password, "profile_tags":tags_str})
         }).then((response) => {
             if (response.ok) {
                 return response.json();
@@ -103,7 +111,7 @@ class Register extends Component {
         }).then((response)=>{
             if (response) {
                 localStorage.setItem('token', response.token);
-                this.props.loginState(response.user);
+                this.props.loginState({user: response.user, tags: response.tags});
                 let path = '/profile';
                 this.props.history.push(path)
             } else {

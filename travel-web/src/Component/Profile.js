@@ -10,17 +10,17 @@ class Profile extends Component {
         super(props);
         this.state = {
             username: store.getState().currentUser.username,
+            user_tags: store.getState().user_tags,
             loading: true
         };
     }
 
     componentDidMount() {
-
         if (!store.getState().waitForAuth) {
             this.setState({loading: false});
         } else {
             store.subscribe(() => {
-                this.setState({loading: false, username: store.getState().currentUser.username})
+                this.setState({loading: false, username: store.getState().currentUser.username,user_tags: store.getState().user_tags})
             })
         }
     }
@@ -29,6 +29,14 @@ class Profile extends Component {
     render() {
         if (this.state.loading)
             return <div className="ui active centered inline loader"></div>;
+        const display_tags = [];
+        for (const [key, value] of this.state.user_tags.entries()){
+            display_tags.push(
+                <Label as='a' tag color="teal">
+                    {value}
+                </Label>
+            )
+        }
         return (
             <Card centered={true} fluid style={{width: 600}}>
                 <br/>
@@ -53,15 +61,7 @@ class Profile extends Component {
                     </Card.Description>
                 </Card.Content>
                 <div>
-                    <Label as='a' tag>
-                        Big Name
-                    </Label>
-                    <Label as='a' color='red' tag>
-                        Europe
-                    </Label>
-                    <Label as='a' color='teal' tag>
-                        Good for scenes
-                    </Label><br/>
+                    {display_tags}<br/>
                 </div>
                 <br/>
             </Card>

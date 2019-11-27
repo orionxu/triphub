@@ -90,7 +90,7 @@ class Login extends Component {
         }).then((response) => {
             if (response) {
                 localStorage.setItem('token', response.token);
-                this.props.loginState(response.user);
+                this.props.loginState({user: response.user,tags:response.tags});
                 console.log(response);
                 let path = '/profile';
                 this.props.history.push(path)

@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'triphub.frontend',
     'rest_framework',
     'rest_framework.authtoken',
+    'taggit',
+    'taggit_serializer'
 ]
 
 MIDDLEWARE = [
