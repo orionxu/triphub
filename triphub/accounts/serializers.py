@@ -5,6 +5,8 @@ from rest_framework.authtoken.models import Token
 from taggit_serializer.serializers import (TagListSerializerField,
                                            TaggitSerializer)
 from django.shortcuts import get_object_or_404
+from triphub.plan.models import Attraction
+from rest_framework import generics
 
 
 class NewTagListSerializerField(TagListSerializerField):
@@ -64,6 +66,24 @@ class JWTSerializer(serializers.Serializer):
             user = User.objects.get(id=token.user_id)
             return user
         raise serializers.ValidationError("Unable to auth with provided credentials.")
+
+
+class AttractionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Attraction
+        fields = '__all__'
+
+
+class AttractionsList(generics.ListAPIView):
+    serializer_class = AttractionSerializer
+
+    def get_queryset(self):
+        """
+        This view should return a list of all the purchases for
+        the user as determined by the username portion of the URL.
+        """
+        city = self.kwargs['city']
+        return Attraction.objects.filter(city=city)
 
 
 

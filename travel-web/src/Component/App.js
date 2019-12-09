@@ -13,7 +13,7 @@ import Auth from "./require_auth";
 import {Component} from "react"
 import {Provider} from 'react-redux';
 import About from "./About";
-import Locations from "./Locations";
+import Locations from "./TourList/Locations";
 
 class App extends Component {
     render() {
@@ -30,7 +30,7 @@ class App extends Component {
                         <Route path="/TourList" component={TourList}/>
                         <Route path="/FixedMenuLayout" component={FixedMenuLayout}/>
                         <Route path="/aboutus" component={About}/>
-                        <Route path="/locations" component={Locations}/>
+                        <Route path="/locations/:position" component={Locations}/>
                     </div>
                 </Router>
             </Provider>

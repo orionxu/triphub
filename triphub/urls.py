@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from triphub.accounts.api import UserRegistrationAPI, LoginAPI, JWTAPI
+from triphub.accounts.serializers import AttractionsList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,6 @@ urlpatterns = [
     path('api/auth/register', UserRegistrationAPI.as_view()),
     path('api/auth/login', LoginAPI.as_view()),
     path('api/auth/jwt', JWTAPI.as_view()),
+    path('api/locations/<str:city>', AttractionsList.as_view())
+
 ]

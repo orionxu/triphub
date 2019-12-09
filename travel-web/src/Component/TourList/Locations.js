@@ -1,38 +1,80 @@
 import React, {Component, Fragment} from 'react';
-import data from '../../data.json';
 
 
 class Locations extends React.Component {
-    renderTrails = () => {
-            const trail=data.map(t => {
-                return(
-                    <div className="card" style={{width: 50 + 'rem'}}>
-                        <img className="card-img-top" src={t.imgSqSmall ? ( t.imgSqSmall) : ("https://source.unsplash.com/featured/?travel")} />
-                        <div className="card-body">
-                            <h1 className="card-title">{t['Attraction name']}</h1>
-                            <h2 className="card-text">{t['Time range']} </h2>
-                            <h4 className="card-text">{t.Description} </h4>
-                            <h4 className="card-text">{t.Locality} </h4>
-                            <h4 className="card-text">{t.Price} </h4>
 
-                        </div>
+    constructor(props) {
+        super(props);
+        //this.handleSubmit = this.handleSubmit.bind(this);
+        this.state = {
+            dataReady: false,
+            attractionsList: {}
+        };
+    }
+
+    Capitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    componentDidMount() {
+        const cityName = this.props.match.params.position;
+        fetch('/api/locations/' + this.Capitalize(cityName), {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+        }).then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                return null;
+            }
+        }).then(response => {
+            if (response) {
+                this.setState({attractionsList: response, dataReady: true});
+            }
+        })
+    }
+
+    renderTrails = () => {
+        let attsList = this.state.attractionsList;
+        const trail = attsList.map(t => {
+            return (
+                <div className="card" style={{width: 50 + 'rem'}}>
+                    <img className="card-img-top"
+                         src={t.imgSqSmall ? (t.imgSqSmall) : ("https://source.unsplash.com/featured/?travel")}/>
+                    <div className="card-body">
+                        <h1 className="card-title">{t.name}</h1>
+                        <h2 className="card-text">{t.time} </h2>
+                        <h4 className="card-text">{t.description} </h4>
+                        <h4 className="card-text">{t.address} </h4>
+                        <h4 className="card-text">{t.rating} </h4>
+
                     </div>
-                )
-            })
-            return(
-                <div className = "row">
-                    {trail}
                 </div>
             )
-    }
-    render(){
+        })
         return (
+            <div className="row">
+                {trail}
+            </div>
+        )
+    }
+
+    render() {
+        if (this.state.dataReady) {
+            return (
 
                 <div align={"center"}>
                     {this.renderTrails()}
                 </div>
 
-        )
+            )
+        }
+        else {
+            return <div className="ui active centered inline loader"></div>;
+        }
     }
 
     // render() {

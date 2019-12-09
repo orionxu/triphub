@@ -10,5 +10,5 @@ urlpatterns = [
     path('TourList', views.index),
     path('FixedMenuLayout', views.index),
     path('aboutus', views.index),
-    path('locations', views.index),
+    path('locations/<str:city>', views.location),
 ]
