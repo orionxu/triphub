@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {Navbar, Nav, Button} from 'react-bootstrap';
+import {Navbar, Nav} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import NaviBarUser from "./NaviBarUser";
-
+import NaviBarFavorites from "./NaviBarFavorites"
 class NaviBar extends Component {
     constructor(props) {
         super(props);
@@ -20,6 +20,7 @@ class NaviBar extends Component {
                                  activeStyle={{color: 'yellow', textDecoration: 'none', marginRight: 10}}>About
                             Us</NavLink>
                     </Nav>
+                    <NaviBarFavorites/>
                     <NaviBarUser/>
                 </Navbar>
             </div>

@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-
+import {Button, Icon} from 'semantic-ui-react'
 
 class Locations extends React.Component {
 
@@ -8,7 +8,7 @@ class Locations extends React.Component {
         //this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             dataReady: false,
-            attractionsList: {}
+            attractionsList: []
         };
     }
 
@@ -37,6 +37,18 @@ class Locations extends React.Component {
         })
     }
 
+    addAttraction(attractionID, attractionName){
+        let jsonList = localStorage.getItem("cart");
+        let parsedList = jsonList? JSON.parse(jsonList):[];
+        if (parsedList.some(item=>item.id===attractionID)){
+            alert(attractionName+" already in the list. ");
+            return;
+        }
+        parsedList.push({id:attractionID, name:attractionName});
+        localStorage.setItem("cart", JSON.stringify(parsedList));
+        alert(attractionName + " added to list. ");
+    }
+
     renderTrails = () => {
         let attsList = this.state.attractionsList;
         const trail = attsList.map(t => {
@@ -50,7 +62,12 @@ class Locations extends React.Component {
                         <h4 className="card-text">{t.description} </h4>
                         <h4 className="card-text">{t.address} </h4>
                         <h4 className="card-text">{t.rating} </h4>
-
+                        <Button animated onClick={()=>this.addAttraction(t.id, t.name)}>
+                            <Button.Content visible>Add</Button.Content>
+                            <Button.Content hidden>
+                                <Icon name='add'/>
+                            </Button.Content>
+                        </Button>
                     </div>
                 </div>
             )
