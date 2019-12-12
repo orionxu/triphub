@@ -86,4 +86,8 @@ class AttractionsList(generics.ListAPIView):
         return Attraction.objects.filter(city=city)
 
 
+class getplanSerializer(serializers.Serializer):
+    places = serializers.CharField(max_length=200)
+
+
 
