@@ -56,7 +56,7 @@ class PlanAPI(generics.GenericAPIView):
         for place in places_list:
             att_id = int(place)
             att_obj = Attraction.objects.get(id=att_id)
-            places_data.append((att_id, att_obj.geo_x, att_obj.geo_y))
+            places_data.append((att_id, att_obj.geo_x, att_obj.geo_y, att_obj.name))
         dist_list = list()
         for i in range(len(places_data)-1):
             for j in range(len(places_data)-1-i):

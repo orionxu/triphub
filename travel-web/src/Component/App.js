@@ -14,6 +14,7 @@ import {Component} from "react"
 import {Provider} from 'react-redux';
 import About from "./About";
 import Locations from "./TourList/Locations";
+import Plan from "./Plan"
 
 class App extends Component {
     render() {
@@ -31,6 +32,7 @@ class App extends Component {
                         <Route path="/FixedMenuLayout" component={FixedMenuLayout}/>
                         <Route path="/aboutus" component={About}/>
                         <Route path="/locations/:position" component={Locations}/>
+                        <Route path="/plan" component={Plan}/>
                     </div>
                 </Router>
             </Provider>

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Dropdown} from 'semantic-ui-react'
+import {Link} from 'react-router-dom';
+
 
 class NaviBarFavorites extends Component {
     constructor(props) {
@@ -54,6 +56,7 @@ class NaviBarFavorites extends Component {
                     <Dropdown.Divider/>
                     {displayList}
                     <Dropdown.Divider/>
+                    <Dropdown.Item as={Link} to="/plan">Generate My Plan</Dropdown.Item>
                     <Dropdown.Item onClick={this.removeAll}>Remove All Favorites</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>

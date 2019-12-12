@@ -11,4 +11,5 @@ urlpatterns = [
     path('FixedMenuLayout', views.index),
     path('aboutus', views.index),
     path('locations/<str:city>', views.location),
+    path('plan', views.index),
 ]
