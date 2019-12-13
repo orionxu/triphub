@@ -12,13 +12,9 @@ class Locations extends React.Component {
         };
     }
 
-    Capitalize(str) {
-        return str.charAt(0).toUpperCase() + str.slice(1);
-    }
-
     componentDidMount() {
         const cityName = this.props.match.params.position;
-        fetch('/api/locations/' + this.Capitalize(cityName), {
+        fetch('/api/locations/' + cityName, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json, text/plain, */*',

@@ -1,27 +1,27 @@
-import newyork from "../Assets/images/newyork.jpeg"
-import paris from "../Assets/images/paris.jpeg"
 import london from "../Assets/images/london.jpeg"
-import tokyo from "../Assets/images/tokyo.jpeg"
-import Beijing from "../Assets/images/Great.jpg"
-import Shanghai from "../Assets/images/Shang.jpeg"
-import HongKong from "../Assets/images/Hong.jpg"
 import Seoul from "../Assets/images/seoul.jpg"
 import Sydney from "../Assets/images/sydney.jpg"
 import Venice from "../Assets/images/Venice.jpg"
+import austin from "../Assets/images/austin.jpg"
+import sf from "../Assets/images/sf.jpg"
+import la from "../Assets/images/la.jpg"
+import milwaukee from "../Assets/images/milwaukee.jpg"
+import chicago from "../Assets/images/chicago.jpg"
+import sd from "../Assets/images/sd.jpg"
 export const tourData = [
   {
     id: 1,
-    city: "new york",
-    img: newyork,
-    name: "new york bridge tour",
+    city: "austin",
+    img: austin,
+    name: "austin tour",
     info:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
   },
   {
     id: 2,
-    city: "paris",
-    img: paris,
-    name: "paris lights tour",
+    city: "san francisco",
+    img: sf,
+    name: "san francisco bridge tour",
     info:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
   },
@@ -35,33 +35,33 @@ export const tourData = [
   },
   {
     id: 4,
-    city: "tokyo",
-    img: tokyo,
-    name: "tokyo sushi tour",
+    city: "los angeles",
+    img: la,
+    name: "los angeles tour",
     info:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
   },
   {
     id: 5,
-    city: "Beijing",
-    img: Beijing,
-    name: "Beijing Great Wall tour",
+    city: "milwaukee",
+    img: milwaukee,
+    name: "Milwaukee oyster tour",
     info:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
   },
   {
     id: 6,
-    city: "Shanghai",
-    img: Shanghai,
-    name: "Shanghai River tour",
+    city: "chicago",
+    img: chicago,
+    name: "chicago River tour",
     info:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
   },
   {
     id: 7,
-    city: "HongKong",
-    img: HongKong,
-    name: "HongKong city tour",
+    city: "san diego",
+    img: sd,
+    name: "san diego ocean tour",
     info:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, nam omnis error corrupti eum assumenda enim odit architecto corporis. Sequi"
   },

@@ -11,10 +11,22 @@ export default class Tour extends Component {
         });
     };
 
+    capitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    convert(str){
+        if (str.includes(" ")) {
+            return str.split(" ").map(x=>this.capitalize(x)).join("_");
+        } else {
+            return this.capitalize(str);
+        }
+    }
+
     render() {
         const {id, city, img, name} = this.props.tour;
         const {removeTour} = this.props;
-        const targetURL = "/locations/" + city;
+        const targetURL = "/locations/" + this.convert(city);
         return (
             <article className="tour">
                 <div className="img-container">
