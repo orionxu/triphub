@@ -8,7 +8,10 @@ class Plan extends Component {
         this.state = {
             attractionsList: [],
             dataReady: false,
-            routeResult: []
+            routeResult: [],
+            appId : '',
+            appCode : '',
+            url: 'https://image.maps.api.here.com/mia/1.6/mapview?w=600&h=300&z=10&t=5&poitxs=16&poitxc=black&poifc=yellow',
         };
     }
 
@@ -48,10 +51,21 @@ class Plan extends Component {
                     </Step.Content>
                 </Step>
             ));
+            let queryPosition = this.state.routeResult.route.map(x=>(x[1]+','+x[2])).join(',');
+            console.log(queryPosition);
             return (
-                <Step.Group>
-                    {displayRoute}
-                </Step.Group>
+                <div>
+                    <Step.Group>
+                        {displayRoute}
+                    </Step.Group>
+                    <img
+                        src={this.state.url
+                        + '&app_id='+ this.state.appId
+                        + '&app_code=' + this.state.appCode
+                        + '&poi=' + queryPosition
+                        }
+                        alt="Todo Map"/>
+                </div>
             )
         }
         return <div className="ui active centered inline loader"></div>;
