@@ -4,6 +4,8 @@ import {Button, Nav} from "react-bootstrap";
 import {Dropdown, Icon} from 'semantic-ui-react'
 import connect from "react-redux/es/connect/connect";
 import {NavLink} from "react-router-dom"
+import history from "./history"
+import { withRouter } from "react-router-dom"
 
 class NaviBarUser extends Component {
     constructor(props) {
@@ -28,6 +30,7 @@ class NaviBarUser extends Component {
     }
 
     handleLogout(){
+        history.push("/");
         this.props.dispatch({type:'LOGOUT_USER'});
         localStorage.clear();
     }
@@ -68,4 +71,4 @@ class NaviBarUser extends Component {
 
 }
 
-export default connect()(NaviBarUser);
+export default withRouter(connect()(NaviBarUser));
