@@ -1,5 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {Button, Icon} from 'semantic-ui-react'
+import store from "../store"
+import {connect} from 'react-redux';
 
 class Locations extends React.Component {
 
@@ -34,14 +36,12 @@ class Locations extends React.Component {
     }
 
     addAttraction(attractionID, attractionName){
-        let jsonList = localStorage.getItem("cart");
-        let parsedList = jsonList? JSON.parse(jsonList):[];
-        if (parsedList.some(item=>item.id===attractionID)){
+        let placesList = store.getState().favorites;
+        if (placesList.some(item=>item.id===attractionID)){
             alert(attractionName+" already in the list. ");
             return;
         }
-        parsedList.push({id:attractionID, name:attractionName});
-        localStorage.setItem("cart", JSON.stringify(parsedList));
+        this.props.addPlace({id:attractionID, name:attractionName});
         alert(attractionName + " added to list. ");
     }
 
@@ -67,13 +67,13 @@ class Locations extends React.Component {
                     </div>
                 </div>
             )
-        })
+        });
         return (
             <div className="row">
                 {trail}
             </div>
         )
-    }
+    };
 
     render() {
         if (this.state.dataReady) {
@@ -109,5 +109,9 @@ class Locations extends React.Component {
     // }
 }
 
-export default Locations;
+const mapDispatchToProps = dispatch => ({
+    addPlace: place => dispatch({type: 'ADD_FAVORITES', payload: place})
+});
+
+export default connect(null, mapDispatchToProps)(Locations);
 

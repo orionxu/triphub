@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Icon, Step} from 'semantic-ui-react'
+import store from "./store"
 
 class Plan extends Component {
     constructor(props) {
@@ -12,13 +13,10 @@ class Plan extends Component {
     }
 
     componentDidMount() {
-        let jsonList = localStorage.getItem("cart");
-        let parsedList = [];
-        if (jsonList) {
-            parsedList = JSON.parse(jsonList);
-            this.setState({attractionsList: parsedList});
-        }
-        let queryStr = parsedList.map(x => x.id).join(",");
+        let placesList = store.getState().favorites;
+        this.setState({attractionsList: placesList});
+        let queryStr = placesList.map(x => x.id).join(",");
+        console.log(queryStr);
         fetch('/api/plan', {
             method: 'POST',
             headers: {

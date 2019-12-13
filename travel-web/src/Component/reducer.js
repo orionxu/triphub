@@ -3,7 +3,8 @@ const initialState = {
     user_tags : [],
     authenticated: false,
     waitForAuth: false,
-}
+    favorites: [],
+};
 
 export default function reducer(state = initialState, action) {
 
@@ -15,6 +16,10 @@ export default function reducer(state = initialState, action) {
             return {...state, currentUser: action.payload.user, user_tags: tags_list, authenticated: true, waitForAuth: false};
         case 'LOGOUT_USER':
             return {...state, currentUser: {}, authenticated: false};
+        case 'ADD_FAVORITES':
+            return {...state, favorites: [...state.favorites, action.payload]};
+        case 'RM_FAVORITES':
+            return {...state, favorites:[]};
         default:
             return state;
     }

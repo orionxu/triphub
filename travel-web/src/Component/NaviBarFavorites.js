@@ -1,41 +1,26 @@
 import React, {Component} from 'react';
 import {Dropdown} from 'semantic-ui-react'
 import {Link} from 'react-router-dom';
-
+import store from "./store";
+import {connect} from 'react-redux';
 
 class NaviBarFavorites extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            attractionsList: []
+            attractionsList: store.getState().favorites
         };
+        this.handleRemove = this.handleRemove.bind(this);
     }
 
     componentDidMount() {
-        if (typeof window !== 'undefined') {
-            let jsonList = localStorage.getItem("cart");
-            if (jsonList) {
-                this.setState({attractionsList: JSON.parse(jsonList)});
-            }
-            window.addEventListener('storage', this.localStorageUpdated)
-        }
+        store.subscribe(() => {
+                this.setState({attractionsList:store.getState().favorites})
+            })
     }
 
-    componentWillUnmount() {
-        if (typeof window !== 'undefined') {
-            window.removeEventListener('storage', this.localStorageUpdated)
-        }
-    }
-
-    localStorageUpdated() {
-        let jsonList = localStorage.getItem("cart");
-        if (jsonList) {
-            this.setState({attractionsList: JSON.parse(jsonList)});
-        }
-    }
-
-    removeAll(){
-        localStorage.removeItem("cart");
+    handleRemove(){
+        this.props.dispatch({type: 'RM_FAVORITES'});
     }
 
     render() {
@@ -57,7 +42,7 @@ class NaviBarFavorites extends Component {
                     {displayList}
                     <Dropdown.Divider/>
                     <Dropdown.Item as={Link} to="/plan">Generate My Plan</Dropdown.Item>
-                    <Dropdown.Item onClick={this.removeAll}>Remove All Favorites</Dropdown.Item>
+                    <Dropdown.Item onClick={this.handleRemove}>Remove All Favorites</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
         )
@@ -65,4 +50,4 @@ class NaviBarFavorites extends Component {
 
 }
 
-export default NaviBarFavorites;
+export default connect()(NaviBarFavorites);
