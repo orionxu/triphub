@@ -66,13 +66,9 @@ class Register extends Component {
         this.handleEmailChange = this.handleEmailChange.bind(this);
         this.handlePWChange = this.handlePWChange.bind(this);
         this.handlePW2Change = this.handlePW2Change.bind(this);
-        this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
-        this.handleLastNameChange = this.handleLastNameChange.bind(this);
         this.handleChecked = this.handleChecked.bind(this);
         this.state = {
             error: null,
-            firstname: "",
-            lastname: "",
             email: "",
             password: "",
             confirmPassword: "",
@@ -138,13 +134,6 @@ class Register extends Component {
         this.setState({confirmPassword: event.target.value});
     }
 
-    handleFirstNameChange(event) {
-        this.setState({firstName: event.target.value});
-    }
-
-    handleLastNameChange(event) {
-        this.setState({lastName: event.target.value});
-    }
 
     handleChecked(name) {
         return (event) => {
@@ -175,31 +164,6 @@ class Register extends Component {
                                 </Grid>
                             </Grid>
                             <Grid container spacing={2}>
-                                <Grid item xs={12} sm={6}>
-                                    <TextField onChange={this.handleFirstNameChange}
-                                               autoComplete="fname"
-                                               name="firstName"
-                                               variant="outlined"
-                                               required
-                                               fullWidth
-                                               id="firstName"
-                                               label="First Name"
-                                               autoFocus
-                                               value={this.state.firstName}
-                                    />
-                                </Grid>
-                                <Grid item xs={12} sm={6}>
-                                    <TextField onChange={this.handleLastNameChange}
-                                               variant="outlined"
-                                               required
-                                               fullWidth
-                                               id="lastName"
-                                               label="Last Name"
-                                               name="lastName"
-                                               autoComplete="lname"
-                                               value={this.state.lastName}
-                                    />
-                                </Grid>
                                 <Grid item xs={12}>
                                     <TextField onChange={this.handleEmailChange}
                                                variant="outlined"
