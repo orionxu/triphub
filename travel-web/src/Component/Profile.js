@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import '../Style/Profile.css';
 import Card from "semantic-ui-react/dist/commonjs/views/Card"
 import store from "./store"
+import history from "./history"
 
 class Profile extends Component {
     constructor(props) {
@@ -18,6 +19,9 @@ class Profile extends Component {
     componentDidMount() {
         if (!store.getState().waitForAuth) {
             this.setState({loading: false});
+            if (!store.getState().authenticated){
+                history.push("/login");
+            }
         } else {
             store.subscribe(() => {
                 this.setState({loading: false, username: store.getState().currentUser.username,user_tags: store.getState().user_tags})

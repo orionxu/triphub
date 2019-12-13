@@ -52,7 +52,6 @@ class NaviBarUser extends Component {
                 disabled: true,
             },
             {key: 'profile', text: 'Your Profile', href: "/profile"},
-            {key: 'favorites', text: 'Favorites'},
             {key: 'sign-out', text: 'Sign Out', onClick: this.handleLogout},
         ];
         if (this.state.auth) {

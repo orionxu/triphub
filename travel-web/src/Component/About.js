@@ -154,7 +154,7 @@ const FixedMenuLayout = () => (
                   rows="10"
                   placeholder="hello there buddy"
               />
-                            <Button style={{color: '#20B2AA', marginTop: '30px'}}> Submit
+                            <Button style={{color: '#20B2AA', marginTop: '30px'}} onClick={()=>alert("Submitted!")}> Submit
                                 <Icon name='right arrow' />
                             </Button>
                         </div>
@@ -183,9 +183,8 @@ const FixedMenuLayout = () => (
                         <Grid.Column width={3}>
                             <Header inverted as='h4' content='About' />
                             <List link inverted>
-                                <List.Item as='a'>Members</List.Item>
-                                <List.Item as='a'>Contact Us</List.Item>
-                                <List.Item as='a'>Plans</List.Item>
+                                <List.Item as='a' href="/aboutus">Members</List.Item>
+                                <List.Item as='a' href="/aboutus">Contact Us</List.Item>
                             </List>
                         </Grid.Column>
                         <Grid.Column width={3}>
@@ -193,12 +192,11 @@ const FixedMenuLayout = () => (
                             <List link inverted>
                                 <List.Item as='a'>Solutions</List.Item>
                                 <List.Item as='a'>FAQ</List.Item>
-                                <List.Item as='a'>Favorite Color</List.Item>
                             </List>
                         </Grid.Column>
                         <Grid.Column width={7}>
                             <Header as='h4' inverted>
-                                Footer Header
+                                Team
                             </Header>
                             <p>
                                 We are GROUP 21 -- TRIPHUB
